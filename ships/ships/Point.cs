@@ -8,8 +8,10 @@ namespace ships
 {
     class Point
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        //public int X { get; set; }
+        public int X = 0;
+        public int Y = 0;
+        //public int Y { get; set; }
 
 
 
