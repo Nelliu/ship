@@ -14,12 +14,13 @@ namespace ships
         {
             for (int i = 0; i < 10; i++)
             {
-                for (int a = 0; a < 10; a++)
+                for (int a = 0; a < 11; a++)
                 {
                         mapp.Add(new Point {
                             X = i,
                             Y = a
                         });
+                        
                 }
                 
             }

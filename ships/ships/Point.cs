@@ -12,6 +12,8 @@ namespace ships
         public int X = 0;
         public int Y = 0;
         //public int Y { get; set; }
+        public int status = 0;
+        public string icon = "■ ";
 
 
 

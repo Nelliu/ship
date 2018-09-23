@@ -10,67 +10,77 @@ namespace ships
     {
         static void Main(string[] args)
         {
-            retab Retabc = new retab(); 
-            List<Point> Position = new List<Point>();
-            int howm = 0;
+            
+                       
+            
+
+           
+            //Console.Write(pam.ReturnFie(a).Y);
+            //Console.Write(pam.ReturnFie(a).X);   // Check of x,y
 
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            /*for (int i = 0; i < 10; i++)
-            {
-                
-                for (int a = 0; a < 10; a++)
-                {
-                    Console.Write(" ■ ");
-                }
-                Console.WriteLine(" ■ ");
-            }*/
 
             List<Point> Fiel = new List<Point>();
             map pam = new map();
-            for (int a = 0; a < 100; a++)
-            {
+
+            boat boatz = new boat();
+            boatList boat = boatz.returnShip(1);
+            int XX = 0;
+            int YY = 0;
+
+            while (true) {
                 
-                    Console.Write(pam.ReturnFie(a).X);
-                    Console.Write(pam.ReturnFie(a).Y);
-                    Console.Write(" ");
-                    if (a == 10 || a == 21)
-                {
-                    Console.WriteLine();
-                }
-                
-            }
-
-
-                                                             
-            
-            int abx = 0;
-            int aby = 0;
-            Console.WriteLine("\n\n\n");
-
-            for (int a = 0; a < 10; a++)
-            {
-                abx = a;
-                for (int i = 0; i < 10; i++)
-                {
-                    aby = i;
-                    Console.Write(abx);
-                    Console.Write(aby);
-                    Console.Write("  ");
-                }
                 Console.WriteLine();
+
+                for (int a = 0; a < 100; a++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    if (a == XX){
+                        pam.ReturnFie(a).status++;
+                        boat.posX = pam.ReturnFie(a).X + XX;
+                        boat.posY = pam.ReturnFie(a).Y + YY;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        for (int i = 0; i < boat.width; i++)
+			            {
+                            Console.Write(pam.ReturnFie(boat.posX).icon);
+            			}
+                              
+                        
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                   
+                        
+
+                    }
+                    else
+                    {
+                        Console.Write(pam.ReturnFie(a).icon);
+                    }
+              
+                    
+
+
+                    if (a == 9 || a == 19 || a == 29 || a == 39 || a == 49 || a == 59 || a == 69 || a == 79 || a == 89 || a == 99)
+                    {
+                        Console.WriteLine();
+                    }
+                    
+                    
+
+                }
+
+                ConsoleKeyInfo abc = Console.ReadKey();
+                if (abc.Key == ConsoleKey.DownArrow){
+                    XX = XX +10;
+                } else if (abc.Key == ConsoleKey.UpArrow){
+                    XX = XX -10;
+                } else if (abc.Key == ConsoleKey.RightArrow){
+                    XX++;
+                } else if(abc.Key == ConsoleKey.LeftArrow){
+                    XX--;
+                }
+
+                Console.Clear();
             }
-
-            Console.WriteLine("\n\n");
-            Console.Write(pam.ReturnFie(50).X);
-            Console.Write(pam.ReturnFie(2).Y);
-
-            
-
-
-
-
-
 
             Console.WriteLine("\n");
         }
