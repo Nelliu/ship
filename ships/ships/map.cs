@@ -12,9 +12,9 @@ namespace ships
 
         public map()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
-                for (int a = 0; a < 11; a++)
+                for (int a = 0; a < 20; a++)
                 {
                         mapp.Add(new Point {
                             X = i,

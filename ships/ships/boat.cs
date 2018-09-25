@@ -26,6 +26,14 @@ namespace ships
                 posX = 0,
                 posY = 0
             });
+            boats.Add(new boatList
+            {
+                type = 2,
+                width = 3,
+                row = 0,
+                posX = 0,
+                posY = 0
+            });
         }
 
 
