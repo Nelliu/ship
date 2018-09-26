@@ -11,8 +11,9 @@ namespace ships
         public int type;
         public int width;
         public int row;
-        public int posX;
-        public int posY; 
+        public int row1 = 0;
+        public int posX = 0;
+        public int posY = 0; 
 
     }
 }
