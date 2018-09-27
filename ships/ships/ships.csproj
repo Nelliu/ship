@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="boat.cs" />
     <Compile Include="boatList.cs" />
+    <Compile Include="boattype.cs" />
+    <Compile Include="MainProgram.cs" />
     <Compile Include="map.cs" />
     <Compile Include="Point.cs" />
-    <Compile Include="retab.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,39 +24,39 @@ namespace ships
             List<Point> Fiel = new List<Point>();
             map pam = new map();
 
-            boat boatz = new boat();
+            boatList boatz = new boatList();
             
             int XX = 0;
             int YY = 0;
             int rotation = 0;
             while (true) {
+                boatList boatList = boatz.returnShip(1);
                 if (rotation == 1)
                 {
-                    boatList boat1 = boatz.rotation(0); 
+                   boatList = boatz.rotation(0); 
                 }
-                else if (rotation == 0)
-                {
-                    boatList boat1 = boatz.returnShip(1);
-                }
+                
                 
                 Console.WriteLine();
 
                 for (int a = 0; a < 100; a++)
                 {
+
                     Console.ForegroundColor = ConsoleColor.Gray;
                     if (a == XX){
                         
-                        boat1.posX = pam.ReturnFie(a).X ;
-                        boat1.posY = pam.ReturnFie(a).Y ;
+                        boatList.posX = pam.ReturnFie(a).X ;
+                        
+                        boatList.posY = pam.ReturnFie(a).Y ;
                         Console.ForegroundColor = ConsoleColor.Green;
-                        for (int i = 0; i < boat.width; i++)
+                        for (int i = 0; i < boatList.Row0; i++)
 			            {
-                            Console.Write(pam.ReturnFie(boat.posX).icon);
+                            Console.Write(pam.ReturnFie(boatList.posX).icon);
                             
             			}
-                        if (boat.width >= 1)
+                        if (boatList.Row0 >= 1)
                         {
-                            a = a + (boat.width );
+                            a = a + (boatList.Row0 );
                         }   
                         
                         
@@ -64,54 +64,61 @@ namespace ships
                         Console.ForegroundColor = ConsoleColor.Gray;
 
                     }
-                    if (boat.row != 0)
+                    if (boatList.Row1 != 0)
                     {
                         if (a == XX + 10)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            for (int i = 0; i < boat.row; i++)
+                            for (int i = 0; i < boatList.Row1; i++)
                             {
-                                Console.Write(pam.ReturnFie(boat.posX).icon);
+
+                                Console.Write(pam.ReturnFie(a).X);
+                                Console.Write(pam.ReturnFie(a).Y);
+                                Console.Write(pam.ReturnFie(boatList.posX).icon);
 
                             }
-                            a = a + boat.row;
+                            a = a + boatList.Row1;
                             Console.ForegroundColor = ConsoleColor.Gray;
                         }
                         
                         
                     }
-                    if (boat.row1 != 0)
+                    if (boatList.Row2 != 0)
                     {
                         if (a == XX + 20)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            for (int i = 0; i < boat.row1; i++)
+                            for (int i = 0; i < boatList.Row2; i++)
                             {
-                                Console.Write(pam.ReturnFie(boat.posX).icon);
+                                Console.Write(pam.ReturnFie(a).X);
+                                Console.Write(pam.ReturnFie(boatList.posX).icon);
                             }
                             Console.ForegroundColor = ConsoleColor.Gray;
                         }
                     }
                     if (pam.ReturnFie(a).status == 1)
                     {
-                        for (int i = 0; i < boat.width; i++)
+                        boatList = boatz.returnShip(1);
+                        for (int i = 0; i < boatList.Row0; i++)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(pam.ReturnFie(a).X);
+                            Console.Write(pam.ReturnFie(a).Y);
                             Console.Write(pam.ReturnFie(a).icon);
                             Console.ForegroundColor = ConsoleColor.Gray;
                         }
-                        if (boat.width >= 1)
+                        if (boatList.Row0 >= 1)
                         {
-                            a = a + (boat.width - 1);
+                            a = a + (boatList.Row0 - 1);
                         }                      
                     }
                     else
                     {
                         Console.Write(pam.ReturnFie(a).icon);
                     }
-              
-                    
 
+                    
+                
 
                     if (a == 9 || a == 19 || a == 29 || a == 39 || a == 49 || a == 59 || a == 69 || a == 79 || a == 89 || a == 99)
                     {
@@ -129,7 +136,7 @@ namespace ships
                     {
 
                     }
-                    else if (boat.row != 0)
+                    else if (boatList.Row1 != 0)
                     {
                         if (Enumerable.Range(81, 89).Contains(XX))
                         {
@@ -186,7 +193,7 @@ namespace ships
                     if (pam.ReturnFie(XX).status != 1)
                     {
                         pam.ReturnFie(XX).status = 1;
-                        if (boat.row != 0)
+                        if (boatList.Row1 != 0)
                         {
                             pam.ReturnFie(XX + 10).status = 1;
                         } 
@@ -212,10 +219,27 @@ namespace ships
 
 
                 Console.Clear();
-                Console.WriteLine(XX);
+                //Console.WriteLine(XX);
+               
+
+                for (int a = 0; a < 100; a++)
+                {
+
+                    Console.Write(pam.ReturnFie(a).X);
+                    Console.Write(" ");
+                    Console.Write(pam.ReturnFie(a).Y);
+                    Console.Write("   ");
+                    if (a == 9 || a == 19 || a == 29 || a == 39 || a == 49 ||a==59||a==69||a==79||a==89)
+                    {
+                        Console.WriteLine();
+                    }
+                    
+                }
+                Console.WriteLine();
             }
 
            
         }
     }
 }
+*/

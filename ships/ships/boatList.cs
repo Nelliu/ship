@@ -8,12 +8,34 @@ namespace ships
 {
     class boatList
     {
-        public int type;
-        public int width;
-        public int row;
-        public int row1 = 0;
-        public int posX = 0;
-        public int posY = 0; 
+        List<boattype> boats = new List<boattype>();
+    
 
+        public boatList()
+        {
+            boats.Add(new boattype {
+                Type = 20,
+                Row0 = 1,
+                R0posY0 = 1
+               
+            });
+            boats.Add(new boattype
+            {
+                Type = 1,
+                Row0 = 1,
+                R0posY0 = 1,
+                R0posY1 = 1,
+                
+            });
+        }
+
+
+        public boattype returnShip(int a)
+        {
+            return boats[a];
+        }
+        
     }
+
+
 }
