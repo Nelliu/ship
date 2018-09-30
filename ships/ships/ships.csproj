@@ -48,7 +48,6 @@
     <Compile Include="MainProgram.cs" />
     <Compile Include="map.cs" />
     <Compile Include="Point.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
