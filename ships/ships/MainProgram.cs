@@ -132,9 +132,6 @@ namespace ships
                                 Console.WriteLine(ships1[0].R0posY0);
 
                             }
-
-
-
                             if (ships1.Count() != 0)
                             {
 
@@ -264,8 +261,6 @@ namespace ships
 
 
                             }
-
-
                         }
 
                         if (pam.ReturnFie(a).status == 1)
@@ -410,7 +405,7 @@ namespace ships
                     {
                         try
                         {
-
+                            
                             ships1[boatnumb].State = 1;
                             
                             oneboat = true;
@@ -829,7 +824,7 @@ namespace ships
                     }
                     
 
-                }      // second player ^^
+                }      // second player 
                 
                 while (fplayshooting)
                 {
@@ -1002,7 +997,7 @@ namespace ships
                             }
                         }
   
-                        anothershot = false;
+                        anothershot = true;
                         
                     }
 
